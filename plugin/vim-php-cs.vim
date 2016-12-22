@@ -8,12 +8,15 @@ if exists("g:phpcs_vim") || &cp
 endif
 let g:phpcs_vim = 1
 
-let g:phpcs_using_cache = 0
-let g:phpcs_rules=@PSR2
-let g:phpcs_path = '/home/work/bin/php-cs-fixer'
+" let g:phpcs_using_cache = 0
+" let g:phpcs_rules=@PSR2
+" let g:phpcs_path = '/home/work/bin/php-cs-fixer'
+" let g:phpcs_php_path = 'php'
 
-let g:phpcs_php_path = get(g:, 'cs_php_path', 'php')
+let g:phpcs_php_path = get(g:, 'phpcs_php_path', 'php')
 let g:phpcs_path = get(g:, 'phpcs_path')
+let g:phpcs_using_cache = get(g:, 'phpcs_using_cache')
+let g:phpcs_rules = get(g:, 'phpcs_rules')
 let g:phpcs_command = g:phpcs_php_path . ' ' . g:phpcs_path . ' fix -q'
 
 func! PhpcsFix(path)
