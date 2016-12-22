@@ -47,6 +47,7 @@ endfunc
 
 " add php cs rules
 func! PhpCsAddRules(command)
+    let command = a:command
     if g:phpcs_rules
         let command = a:command . ' --rules=' . g:phpcs_rules
     endif
