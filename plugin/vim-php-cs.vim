@@ -25,13 +25,26 @@ func! PhpcsFix(path)
     let command = PhpCsUsingCache(command)
     let command = PhpCsAddRules(command)
 
+    let buffer_cursor_pos = GetBeforeFormatPos()
     let s:output = system(command)
     if v:shell_error
         echohl Error | echo s:output | echohl None | echo command
     else
         exec 'edit!'
+        call SetAfterFormatPos(buffer_cursor_pos)
         :set syntax=php
     endif
+endfunc
+
+" get last cursor position
+func! GetBeforeFormatPos()
+    let buffer_cursor_pos = getpos(".")
+    return buffer_cursor_pos
+endfunc
+
+" set current cursor position
+func! SetAfterFormatPos(buffer_cursor_pos)
+    call setpos(".", a:buffer_cursor_pos)
 endfunc
 
 " using-cache
