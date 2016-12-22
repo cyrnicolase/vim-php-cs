@@ -1,5 +1,5 @@
 "==============================================
-" File cs.vim
+" File vim-php-cs.vim
 " Author: Cyrnicolase
 "==============================================
 
@@ -74,3 +74,6 @@ endfunc
 
 " Auto command
 :autocmd BufWritePost *.php :call PhpcsFixFile()
+
+
+
