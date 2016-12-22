@@ -29,7 +29,7 @@ The path of `php`
 -------------------------
 
 ```
-let g:phpcs_path = /home/work/bin/php-cs-fixer
+let g:phpcs_path = '/home/work/bin/php-cs-fixer'
 ```
 The absolute path of `php-cs-fixer`
 
@@ -38,7 +38,7 @@ The absolute path of `php-cs-fixer`
 ```
 let g:phpcs_using_cache = 0
 ```
-Disable php-cs-fixer using cache file.
+Disable php-cs-fixer using cache file.<br />
 Default Value: 1
 
 -------------------------
