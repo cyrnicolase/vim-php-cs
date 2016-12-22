@@ -1,5 +1,5 @@
 ## vim-php-cs
-vim-php-cs bundle for vim
+vim-php-cs bundle for vim. <br />
 This bundle provides file format for php. It based on [php-cs-fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer).
 
 
